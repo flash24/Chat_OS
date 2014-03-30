@@ -1,0 +1,18 @@
+{
+  "name": "Lungo chat",
+  "description": "Chat Animado para Firefox OS",
+  "launch_path": "/index",
+  "icons": {
+    "128": "/img/icon.png"
+  },
+  "developer": {
+    "name": "cesar",
+    "url": "http://www.mozilla-hispano.org/labs/"
+  },
+  "default_locale": "es",
+  "permissions": {
+      "desktop-notification": {
+        "description": "Allows to display notifications on the user's desktop."
+        }
+  }
+}
