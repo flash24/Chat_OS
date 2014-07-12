@@ -2,16 +2,20 @@
 <html lang="es">
 <head>
 	<meta charset="utf-8">
-    <title>Ejemplo Firefox OS App</title>
+    <title>Firefox OS Chat</title>
          <meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1">
     <link rel="stylesheet" href="css/lungo.css">
 	<link rel="stylesheet" href="css/lungo.icon.css">
 	<link rel="stylesheet" href="css/lungo.theme.css">
 	<script src="js/quo.js"></script>
 	<script src="js/lungo.js"></script>    
-    <script src="js/webapp.js"></script>
+    <script src="js/webapp.js"></script>       
+    <script src="js/jquery.min.js"></script>         
+    <script src="js/testing_g.js"></script>         
+    <script src="phonegap.js"></script>
 </head>
-<body onload="Lungo.init({})">
+<body onload="Lungo.init({}),onBodyLoad()">
+<!----------Login--------------------
 <section id="login" data-transition="slide">
 <header data-title="Registrar"></header>
     <article id="log-1" class="active splash">
@@ -21,7 +25,8 @@
                 <label class="select border">
                     <select class="custom">
                         <option value="1">País</option>
-                        <option value="2">(+52) México</option2                        <option value="3">España</option>
+                        <option value="2">(+52) México</option>
+                        <option value="3">España</option>
                     </select>
                 </label>
             </fieldset>
@@ -41,8 +46,8 @@
         <ul>
             <!-- Basic Layout -->
             <li data-view-article="main-article" data-icon="question-sign" class=""><a href="#">
-                <strong>Meet the framework</strong>
-                <small>Real Cross-Device</small></a>
+                <strong>About</strong>
+                <small></small></a>
             </li>
 
         </ul>
@@ -56,14 +61,20 @@
         </nav>
 	</header>
     <nav data-control="groupbar">
-        <a href="#" data-title="Chat OS" data-view-article="article_1" class="active" data-icon="home"></a>
-        <a href="#" data-title="Conversaciones" data-view-article="article_2" data-icon="comments"></a>
-        <a href="#" data-title="Contactos" data-view-article="article_3" data-icon="user"></a>
+    
+        <a href="#" data-title="Chat OS" data-view-article="article_1" class="active" data-icon="home"><strong> Home</strong>
+        </a>
+        <a href="#" data-title="Conversaciones" data-view-article="article_2" data-icon="comments">
+            <strong> Chats</strong>
+            
+        </a>
+        <a href="#" data-title="Contactos" data-view-article="article_3" data-icon="user">
+            <strong>Contactos</strong>
+        </a>
     </nav>
 
 
-    <article style="height:80%" id="article_1" class="active indented">
-    <button onclick="notifyMe()" class="anchor margin-bottom" data-label="Notificacion"><abbr></abbr></button>
+    <article style="height:80%" id="article_1" class="active indented list scroll indented active">
     </article>
     <article style="height:80%" id="article_2" class="indented">
         
